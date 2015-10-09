@@ -11,9 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
-    
-    
     @IBOutlet weak var blogTitleOutlet: UITableView!
     
     override func viewDidLoad() {
@@ -21,7 +18,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let blog = BlogEntry(title: "Blog One", content: "This is our first blog")
         myBlog.entries.append(blog)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,6 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+
     
 }
 
