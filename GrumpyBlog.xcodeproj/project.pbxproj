@@ -12,6 +12,7 @@
 		3F41F63F1BC8148E0035BD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F41F63D1BC8148E0035BD68 /* Main.storyboard */; };
 		3F41F6411BC8148E0035BD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F41F6401BC8148E0035BD68 /* Assets.xcassets */; };
 		3F41F6441BC8148E0035BD68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F41F6421BC8148E0035BD68 /* LaunchScreen.storyboard */; };
+		3F41F64C1BC82E4F0035BD68 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41F64B1BC82E4F0035BD68 /* AddEditViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C0D330471BC81BB0000C92B8 /* BlogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D330461BC81BB0000C92B8 /* BlogEntry.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		3F41F6401BC8148E0035BD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F41F6431BC8148E0035BD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F41F6451BC8148E0035BD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F41F64B1BC82E4F0035BD68 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		C0D330461BC81BB0000C92B8 /* BlogEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				3F41F6401BC8148E0035BD68 /* Assets.xcassets */,
 				3F41F6421BC8148E0035BD68 /* LaunchScreen.storyboard */,
 				3F41F6451BC8148E0035BD68 /* Info.plist */,
+				3F41F64B1BC82E4F0035BD68 /* AddEditViewController.swift */,
 			);
 			path = GrumpyBlog;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F41F64C1BC82E4F0035BD68 /* AddEditViewController.swift in Sources */,
 				C0D330471BC81BB0000C92B8 /* BlogEntry.swift in Sources */,
 				3F41F63C1BC8148E0035BD68 /* ViewController.swift in Sources */,
 				3F41F63A1BC8148E0035BD68 /* AppDelegate.swift in Sources */,

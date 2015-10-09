@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var myBlog = [BlogEntry]()
     
     
+    @IBOutlet weak var blogTitleOutlet: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        blogTitleOutlet.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
