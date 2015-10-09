@@ -22,10 +22,14 @@ class AddEditViewController : UIViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+    }
+    
     
     @IBAction func saveBlogEntry(sender: AnyObject) {
         let entry = BlogEntry(title: blogTitleInput.text!, content: blogContentInput.text!)
-        ViewController().myBlog.append(entry)
+        myBlog.entries.append(entry)
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }

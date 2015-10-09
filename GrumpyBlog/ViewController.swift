@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    var myBlog = [BlogEntry]()
+    
     
     
     @IBOutlet weak var blogTitleOutlet: UITableView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         let blog = BlogEntry(title: "Blog One", content: "This is our first blog")
-        myBlog.append(blog)
+        myBlog.entries.append(blog)
         
     }
     
@@ -34,14 +34,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myBlog.count
+        return myBlog.entries.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Default")
         
         
-        cell.textLabel?.text = myBlog[indexPath.row].title
+        cell.textLabel?.text = myBlog.entries[indexPath.row].title
         
         return cell
     }
