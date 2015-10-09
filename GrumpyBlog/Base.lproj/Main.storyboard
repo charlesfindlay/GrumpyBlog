@@ -30,10 +30,52 @@
                     <navigationItem key="navigationItem" title="Blog App" id="ltv-jp-cOD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bIf-15-jMg"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Eyr-at-FvI" kind="push" identifier="showBlogContent" id="J6Y-UZ-HpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="289"/>
+            <point key="canvasLocation" x="512" y="289"/>
+        </scene>
+        <!--Blog-->
+        <scene sceneID="S5q-Ve-85C">
+            <objects>
+                <viewController id="Eyr-at-FvI" customClass="BlogContentViewController" customModule="GrumpyBlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfK-fd-TYY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0m1-JC-bHG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zCB-s5-d9D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIQ-dw-zXY">
+                                <rect key="frame" x="20" y="124" width="280" height="419"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdp-7Z-KkM">
+                                <rect key="frame" x="20" y="72" width="292" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Blog" id="7lh-d1-rbI"/>
+                    <connections>
+                        <outlet property="entryContentLabel" destination="FIQ-dw-zXY" id="5FX-TP-jIc"/>
+                        <outlet property="entryTitleLabel" destination="gdp-7Z-KkM" id="dXS-Vd-mgu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPx-PZ-f7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="288"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMe-B8-CAS">

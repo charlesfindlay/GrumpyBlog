@@ -12,14 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     var myBlog = [BlogEntry]()
+    let blog = BlogEntry(title: "Blog One", content: "This is our first blog")
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let blog = BlogEntry(title: "Blog One", content: "This is our first blog")
         myBlog.append(blog)
+        
         
     }
     
@@ -41,6 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+
     
 }
 
