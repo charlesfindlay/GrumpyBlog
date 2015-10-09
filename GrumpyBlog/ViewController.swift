@@ -13,11 +13,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var blogTitleOutlet: UITableView!
     
+    var detailCell: BlogEntry!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let blog = BlogEntry(title: "Blog One", content: "This is our first blog")
-        myBlog.entries.append(blog)
+        let blog1 = BlogEntry(title: "Cookies!!!", content: "Cookie Monster endorses Kate's cookies. Yah.")
+        let blog2 = BlogEntry(title: "You're a contemporary Mexican", content: "True words spoken by...")
+        let blog3 = BlogEntry(title: "Slack", content: "Emojis, Grumpy Cats, and more...")
+        
+        myBlog.entries.append(blog1)
+        myBlog.entries.append(blog2)
+        myBlog.entries.append(blog3)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +47,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = myBlog.entries[indexPath.row].title
         
         return cell
+    }
+    
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            myBlog.entries.removeAtIndex(indexPath.row)
+            blogTitleOutlet.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        detailCell = myBlog.entries[indexPath.row]
+        self.performSegueWithIdentifier("showBlogContent", sender: indexPath.row)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showBlogContent" {
+            let vc = segue.destinationViewController as! BlogContentViewController
+            vc.entry = detailCell
+            
+        }
     }
     
 

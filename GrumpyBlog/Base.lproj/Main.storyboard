@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Blog App-->
+        <!--Grumpy Blog-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrumpyBlog" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Blog App" id="ltv-jp-cOD">
+                    <navigationItem key="navigationItem" title="Grumpy Blog" id="ltv-jp-cOD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bIf-15-jMg">
                             <connections>
                                 <segue destination="sfV-KC-FV6" kind="modal" id="HPj-Cf-K2U"/>
@@ -38,11 +38,62 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blogTitleOutlet" destination="oi4-7d-BMa" id="fIn-WM-g8u"/>
+                        <segue destination="Hzo-wv-Db5" kind="push" identifier="showBlogContent" id="i97-gj-tOI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="649" y="289"/>
+        </scene>
+        <!--Blog Content View Controller-->
+        <scene sceneID="hZa-8e-tp1">
+            <objects>
+                <viewController id="Hzo-wv-Db5" customClass="BlogContentViewController" customModule="GrumpyBlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hqg-yU-qfO"/>
+                        <viewControllerLayoutGuide type="bottom" id="gBI-Ao-c9j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sLC-is-SXd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kig-1g-eNc">
+                                <rect key="frame" x="35" y="150" width="250" height="350"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Xnh-CX-tcC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwf-1g-noV">
+                                <rect key="frame" x="35" y="99" width="250" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="IVF-bY-f7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kig-1g-eNc" firstAttribute="centerX" secondItem="sLC-is-SXd" secondAttribute="centerX" id="ScE-VA-alS"/>
+                            <constraint firstItem="Qwf-1g-noV" firstAttribute="centerX" secondItem="sLC-is-SXd" secondAttribute="centerX" id="lsr-JT-T0h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O1V-74-I8m"/>
+                    <connections>
+                        <outlet property="entryContentLabel" destination="Kig-1g-eNc" id="XLk-R6-PNQ"/>
+                        <outlet property="entryTitleLabel" destination="Qwf-1g-noV" id="Jsk-PB-mnD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t74-4j-SrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="478"/>
         </scene>
         <!--Add Edit View Controller-->
         <scene sceneID="i9x-FN-15F">

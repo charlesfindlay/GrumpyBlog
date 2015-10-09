@@ -14,6 +14,7 @@
 		3F41F6441BC8148E0035BD68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F41F6421BC8148E0035BD68 /* LaunchScreen.storyboard */; };
 		3F41F64C1BC82E4F0035BD68 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41F64B1BC82E4F0035BD68 /* AddEditViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F41F64E1BC837260035BD68 /* Blog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41F64D1BC837260035BD68 /* Blog.swift */; settings = {ASSET_TAGS = (); }; };
+		3F41F6501BC84D660035BD68 /* BlogContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41F64F1BC84D660035BD68 /* BlogContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C0D330471BC81BB0000C92B8 /* BlogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D330461BC81BB0000C92B8 /* BlogEntry.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		3F41F6451BC8148E0035BD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F41F64B1BC82E4F0035BD68 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		3F41F64D1BC837260035BD68 /* Blog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blog.swift; sourceTree = "<group>"; };
+		3F41F64F1BC84D660035BD68 /* BlogContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogContentViewController.swift; sourceTree = "<group>"; };
 		C0D330461BC81BB0000C92B8 /* BlogEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		3F41F6381BC8148E0035BD68 /* GrumpyBlog */ = {
 			isa = PBXGroup;
 			children = (
+				3F41F64F1BC84D660035BD68 /* BlogContentViewController.swift */,
 				3F41F6391BC8148E0035BD68 /* AppDelegate.swift */,
 				3F41F63B1BC8148E0035BD68 /* ViewController.swift */,
 				C0D330461BC81BB0000C92B8 /* BlogEntry.swift */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F41F6501BC84D660035BD68 /* BlogContentViewController.swift in Sources */,
 				3F41F64E1BC837260035BD68 /* Blog.swift in Sources */,
 				3F41F64C1BC82E4F0035BD68 /* AddEditViewController.swift in Sources */,
 				C0D330471BC81BB0000C92B8 /* BlogEntry.swift in Sources */,
